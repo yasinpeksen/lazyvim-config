@@ -42,3 +42,11 @@ map("n", "<leader>dd", function()
     end
   end)
 end, { desc = "Debug: Choose configuration" })
+
+-- ----- Jest Tests -----
+-- Run Jest test for current file in new terminal split
+map("n", "<leader>ct", function()
+  local filepath = vim.fn.expand("%")
+  local command = "npx jest " .. filepath
+  vim.cmd("terminal " .. command)
+end, { desc = "Run Jest test for current file" })
