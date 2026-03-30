@@ -44,6 +44,53 @@ return {
             },
           },
         },
+        keys = {
+          {
+            "gD",
+            function()
+              local win = vim.api.nvim_get_current_win()
+              local params = vim.lsp.util.make_position_params(win, "utf-16")
+              LazyVim.lsp.execute({
+                command = "typescript.goToSourceDefinition",
+                arguments = { params.textDocument.uri, params.position },
+                open = true,
+              })
+            end,
+            desc = "Goto Source Definition",
+          },
+          {
+            "gR",
+            function()
+              LazyVim.lsp.execute({
+                command = "typescript.findAllFileReferences",
+                arguments = { vim.uri_from_bufnr(0) },
+                open = true,
+              })
+            end,
+            desc = "File References",
+          },
+          {
+            "<leader>cM",
+            LazyVim.lsp.action["source.addMissingImports.ts"],
+            desc = "Add missing imports",
+          },
+          {
+            "<leader>cD",
+            LazyVim.lsp.action["source.fixAll.ts"],
+            desc = "Fix all diagnostics",
+          },
+          {
+            "<leader>cV",
+            function()
+              LazyVim.lsp.execute({
+                title = "Select TypeScript Version",
+                filter = "vtsls",
+                command = "typescript.selectTypeScriptVersion",
+              })
+            end,
+            desc = "Select TS workspace version",
+          },
+        },
       },
     },
     setup = {
