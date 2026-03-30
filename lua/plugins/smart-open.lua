@@ -1,3 +1,7 @@
+if vim.fn.has("win32") == 1 then
+  vim.g.sqlite_clib_path = "c:/sqlite/sqlite3.dll"
+end
+
 return {
   {
     "danielfalk/smart-open.nvim",
