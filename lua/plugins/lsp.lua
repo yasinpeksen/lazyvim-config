@@ -15,6 +15,7 @@ return {
           "typescript.tsx",
         },
         settings = {
+          packageManager = "yarn",
           complete_function_calls = true,
           vtsls = {
             enableMoveToFileCodeAction = true,
