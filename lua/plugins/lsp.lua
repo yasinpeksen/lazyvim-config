@@ -81,6 +81,18 @@ return {
             desc = "Fix all diagnostics",
           },
           {
+            "<leader>cO",
+            function()
+              LazyVim.lsp.execute({
+                command = "_typescript.organizeImports",
+                arguments = { vim.api.nvim_buf_get_name(0) },
+                title = "",
+                open = true,
+              })
+            end,
+            desc = "Organize imports",
+          },
+          {
             "<leader>cV",
             function()
               LazyVim.lsp.execute({

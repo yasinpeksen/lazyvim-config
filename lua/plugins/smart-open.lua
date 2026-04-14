@@ -21,6 +21,8 @@ return {
     "nvim-telescope/telescope.nvim",
     opts = {
       defaults = {
+        hidden = true,
+        no_ignore = true,
         layout_config = {
           prompt_position = "top", -- Moves prompt to top
         },
