@@ -23,6 +23,7 @@ return {
       defaults = {
         hidden = true,
         no_ignore = true,
+        sorting_strategy = "ascending",
         layout_config = {
           prompt_position = "top", -- Moves prompt to top
         },
