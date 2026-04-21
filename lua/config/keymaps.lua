@@ -50,3 +50,11 @@ map("n", "<leader>ct", function()
   local command = "npx jest " .. filepath
   vim.cmd("terminal " .. command)
 end, { desc = "Run Jest test for current file" })
+
+--- Find gql resolver from action repository ---
+vim.keymap.set(
+  "n",
+  "<leader>gR",
+  require("helpers.find-resolver").find,
+  { desc = "Find resolver from action repository" }
+)
