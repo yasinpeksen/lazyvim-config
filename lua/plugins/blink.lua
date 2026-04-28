@@ -6,7 +6,6 @@ return {
     keymap = {
       preset = "super-tab",
       ["<C-y>"] = { "select_and_accept" },
-      ["<Cr>"] = { "select_and_accept" },
       ["<Right>"] = false,
       ["<Left>"] = false,
       ["<C-k>"] = { "select_prev", "fallback" },
