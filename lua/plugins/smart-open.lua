@@ -16,6 +16,23 @@ return {
       -- Optional.  If installed, native fzy will be used when match_algorithm is fzy
       { "nvim-telescope/telescope-fzy-native.nvim" },
     },
+    opts = {
+      defaults = {
+        match_algorithm = "fzy",
+        hidden = true,
+        no_ignore = true,
+        sorting_strategy = "ascending",
+        layout_config = {
+          prompt_position = "top", -- Moves prompt to top
+        },
+        mappings = {
+          i = {
+            ["<C-j>"] = "move_selection_next",
+            ["<C-k>"] = "move_selection_previous",
+          },
+        },
+      },
+    },
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -31,6 +48,12 @@ return {
           i = {
             ["<C-j>"] = "move_selection_next",
             ["<C-k>"] = "move_selection_previous",
+          },
+        },
+        extensions = {
+          smart_open = {
+            match_algorithm = "fzy",
+            disable_devicons = false,
           },
         },
       },
