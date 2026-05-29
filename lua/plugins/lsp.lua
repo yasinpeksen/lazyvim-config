@@ -23,6 +23,9 @@ return {
           vtsls = {
             enableMoveToFileCodeAction = true,
             autoUseWorkspaceTsdk = true,
+            typescript = {
+              globalTsdk = "~/.nvm/versions/node/v20.19.6/lib/node_modules/typescript/lib",
+            },
             experimental = {
               completion = {
                 enableServerSideFuzzyMatch = true,
