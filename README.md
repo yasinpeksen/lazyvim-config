@@ -11,7 +11,7 @@ cd ~/.config/nvim/lua
 git init
 git remote add origin https://github.com/yasinpeksen/lazyvim-config.git
 git pull origin main
-git branch --set-upstream-to=origin/master main
+git branch --set-upstream-to=origin/main main
 
 ```
 
@@ -24,6 +24,6 @@ cd $env:LOCALAPPDATA\nvim\lua
 git init
 git remote add origin https://github.com/yasinpeksen/lazyvim-config.git
 git pull origin main
-git branch --set-upstream-to=origin/master main
+git branch --set-upstream-to=origin/main main
 
 ```
