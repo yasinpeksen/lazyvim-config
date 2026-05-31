@@ -7,7 +7,11 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ```bash
 
 git clone https://github.com/LazyVim/starter ~/.config/nvim
-git clone https://github.com/yasinpeksen/lazyvim-config.git ~/.config/nvim/lua
+cd ~/.config/nvim/lua
+git init
+git remote add origin https://github.com/yasinpeksen/lazyvim-config.git
+git pull origin main
+git branch --set-upstream-to=origin/master main
 
 ```
 
@@ -16,6 +20,10 @@ git clone https://github.com/yasinpeksen/lazyvim-config.git ~/.config/nvim/lua
 ```bash
 
 git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
-git clone https://github.com/yasinpeksen/lazyvim-config.git $env:LOCALAPPDATA\nvim\lua
+cd $env:LOCALAPPDATA\nvim\lua
+git init
+git remote add origin https://github.com/yasinpeksen/lazyvim-config.git
+git pull origin main
+git branch --set-upstream-to=origin/master main
 
 ```
